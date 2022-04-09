@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+     <style>
+         body{
+             background: pink;
+             height: 100%;
+             text-align: center;
+             font-size: 18px; 
+         }
+         .wrapper{
+             width: 100%;
+             margin: 0 auto;
+         }
+         .wrapper:after{
+             content: "";
+             display: table;
+             clear: both;
+         }
+         canvas{
+             color: aliceblue;
+             border: #fff dashed 2px;
+             padding: 15px;
+         }
+         h1,h2,h3{
+             font-family: 'Roboto',sans-serif;
+             font-weight: 100;
+             text-transform: uppercase;
+             margin: 5px 0;
+         }
+         h1{
+             font-size: 2.6em;
+         }
+         h2{
+             font-size: 1.6em;
+         }
+         h3{
+             font-size: 1.6em;
+         }
+         p{
+             font-size: 1.6em;
+         }
+         #alphabet:after{
+             content: "";
+             display: table;
+             clear: both;
+         }
+         #alphabet li{
+             float: left;
+             margin: 0 10px 10px 0;
+             list-style: none;
+             width: 35px;
+             height: 30px;
+             padding-top: 10px;
+             background: #fff;
+             color: #000;
+             font-weight: 700;
+             cursor: pointer;
+             -moz-border-radius: 5px;
+             -webkit-border-radius: 5px;
+             border-radius: 5px;
+             -khtml-border-radius: 5px;
+             border: solid 1px #fff;
+         }
+         #alphabet li:hover{
+             background: #c1d72e;
+             border: solid 1px #fff;
+             color: #fff;
+         }
+         #my-word{
+             margin: 0;
+             display: block;
+             padding: 0;
+             display: block;
+         }
+         #my-word li{
+             position: relative;
+             list-style: none;
+             margin: 0;
+             display: inline-block;
+             padding: 0 10px;
+             font-size: 1.6em;
+         }
+         .active{
+             opacity: 0.4;
+             filter: alpha(opacity=40);
+             -moz-transition: all 1s ease-in;
+             -moz-transition: all 0.3s ease-in-out;
+             -webkit-transition:all 0.3s ease-in-out;
+             cursor: default;
+         }
+         .active:hover{
+             -moz-transition: all 1s ease-in;
+             -moz-transition: all 0.3s ease-in-out;
+             -webkit-transition: all 0.3s ease-in-out;
+             opacity: 0.4;
+             filter: alpha(opacity=40);
+             -moz-transition: all 1s ease-in;
+             -moz-transition: all 0.3s  ease-in-out;
+             -webkit-transition: all 0.3s ease-in-out;
+         }
+         #mylives{
+             font-size: 1.6em;
+             text-align: center;
+             display: block;
+         }
+         button{
+            background:white;
+            color:black;
+            border: solid 1px white;
+            text-decoration:none;
+            cursor:pointer;
+            font-size:1.2em;
+            padding:18px 10px;
+            width:180px;
+             margin: 10px;
+             outline: none;
+         }
+
+     </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Hangman</h1>
+        <h2> Javascript Hangman Game</h2>
+        <p>Use the alphabet to guess the word,or click hint to get a clue.</p>
+    </div>
+    <div class="wrapper">
+        <div id="buttons">
+
+        </div>
+        <p id="catagoryName"></p>
+        <div id="hold">
+
+        </div>
+        <p id="mylives"></p>
+        <p id="clue">clue</p>
+        <canvas id="stickman">This Text will show if the Browser does Not support HTML Canvas tag</canvas>
+        <div class="container">
+            <button id="hint">Hint</button>
+            <button id="reset">play again</button>
+
+        </div>
+    </div>
+<script src="app.js"></script>
+
+</body>
+</html>
