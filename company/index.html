@@ -22,7 +22,7 @@ table{border:1px solid;
 }
 
 th {border: 1px solid;
-    background-color: gray;
+    background-color:white;
     padding: 10px;
 }
 td {border: 1px solid;
@@ -32,31 +32,47 @@ td {border: 1px solid;
 </head>
 <body>
  
-<section class="container">
-<div class="divForm">
-    <form action="" id="mobForm">
-        <fieldset>
-        <legend>Company Employee</legend>
-        <label for="" id="userName">Name</label>
-        <br><input type="text" name="useName" id="client">
-        <br><br>
-        <label for="" id="userName">Email</label>
-        <br><input type="text" name="useName" id="client">
-        <br><br>
-        <label for="" id="devisType">Department</label>
-        <br>
-        <select name="typeNameD" id="typeName">
-            <option value="call-center">call-center</option>
-            <option value="information-Technology">information-Technology</option>
-            <option value="Human-resources">Human-resources</option>
-        </select>
-        <br><br>
-        <input type="button" id="btn" value="submit"></button> 
-        </fieldset>
-    </form>
-</div>
-
-</section>
+    
+    <section class="container">
+    <div class="divForm">
+        <form action="" id="employeeForm">
+            <fieldset>
+            <legend>Company Employee</legend>
+            <label for="" id="userName">Name</label>
+            <br><input type="text" name="useName" id="client">
+            <br><br>
+            <label for="" id="Email">Email</label>
+            <br><input type="text" name="Email" id="client">
+            <br><br>
+            <label for="" id="devisType">Department</label>
+            <br>
+            <select name="typeNameD" id="typeName">
+                <option value="callCen">call-center</option>
+                    <option value="infoTech">information-Technology</option>
+                    <option value="humRes">Human-resources</option>
+            </select>
+            <br><br>
+            <input type="button" id="btn" value="Submit"></button> 
+            </fieldset>
+        </form>
+    </div>
+    <div class="divTable">
+        <table id="tableCon">
+            <thead id="headTa">
+                <tr>
+                    <th> Name</th>
+                    <th>Salary </th>
+                    <th>Department </th>
+                    
+                   
+                </tr>
+            </thead>
+            <tbody id="boadTa"></tbody>
+            <tfoot id="footTa"></tfoot>
+        </table>
+    
+    </div>
+    </section>
       <script src="app1.js"></script>
 </body>
 </html>

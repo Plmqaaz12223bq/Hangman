@@ -182,9 +182,9 @@ window.onload = function () {
     // Play
     play = function () {
       categories = [
-          ["Mansaf", "Noodles", "pizza", "Burger", "Msakhan", "Taco"],
-          ["Up", "Harry Potter", "Hush", " Home Alone", "Fast and Furious"],
-          ["Seoul", "Washington", "Madrid", "Amsterdam", "Ankara"]
+          ["mansaf", "noodles", "pizza", "burger", "msakhan", "taco"],
+          ["up", "harry potter", "hush", " home alone", "fast and furious"],
+          ["seoul", "washington", "madrid", "amsterdam", "ankara"]
       ];
   
       chosenCategory = categories[Math.floor(Math.random() * categories.length)];
